@@ -18,4 +18,10 @@ class inventories extends Model
         'dueAmount',
         'paidAmount',
     ];
+
+
+    public function customer()
+    {
+        return $this->hasMany(customer::class);
+    }
 }

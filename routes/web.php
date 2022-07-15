@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/sessionDelete', [HomeController::class, 'sessionDelete']);
+Route::patch('/update-cart', [HomeController::class, 'update'])->name('updateCart');
+Route::get('/add-to-cart/{id}', [HomeController::class, 'addToCart'])->name('addToCart');

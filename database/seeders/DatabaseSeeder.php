@@ -2,6 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\customer;
+use Faker\Extension\Container;
+use Faker\Factory as Faker;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -16,9 +19,12 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
+        // $faker = Faker::create();
+
+        // customer::create([
+        //     'name' => $faker->name,
+        //     'phone' => $faker->phoneNumber,
+        //     'address' => $faker->address,
         // ]);
     }
 }

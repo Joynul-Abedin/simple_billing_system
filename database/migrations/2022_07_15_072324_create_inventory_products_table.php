@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('inventory_products', function (Blueprint $table) {
             $table->id();
+            $table->integer('inventoryId');
+            $table->integer('productId');
+            $table->double('rate');
+            $table->integer('qty');
+            $table->double('discount');
             $table->timestamps();
         });
     }

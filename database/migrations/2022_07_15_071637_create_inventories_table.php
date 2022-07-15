@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('inventories', function (Blueprint $table) {
             $table->id();
             $table->date('date');
-            $table->uniqid('billNo');
+            $table->string('billNo')->unique();;
             $table->integer('customerId');
             $table->double('totalDiscount');
             $table->double('totalBillamount');
