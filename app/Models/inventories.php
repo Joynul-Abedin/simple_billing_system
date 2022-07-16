@@ -9,7 +9,7 @@ class inventories extends Model
 {
     use HasFactory;
 
-    protected $fillabele = [
+    protected $fillable = [
         'date',
         'billNo',
         'customerId',

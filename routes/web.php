@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/sessionDelete', [HomeController::class, 'sessionDelete']);
-Route::patch('/update-cart', [HomeController::class, 'update'])->name('updateCart');
+Route::get('/session', [HomeController::class, 'session']);
+Route::patch('/update-cart', [HomeController::class, 'updateCart'])->name('updateCart');
+Route::patch('/update-discount', [HomeController::class, 'updateDiscount'])->name('updateDiscount');
+Route::patch('/update-amount', [HomeController::class, 'updateAmount'])->name('updateAmount');
+Route::post('/save-changes', [HomeController::class, 'saveChanges'])->name('saveChanges');
 Route::get('/add-to-cart/{id}', [HomeController::class, 'addToCart'])->name('addToCart');
